@@ -36,6 +36,11 @@ limitations under the License.
     <param name="rate" value="30"/>
     <param name="use_gui" value="true"/>
   </node>
+    
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui"
+        type="joint_state_publisher_gui" ns="$(arg namespace)">
+    <param name="rate" value="30"/>
+  </node>
 
   <include file="$(find ackermann_vehicle_description)/launch/rviz.launch">
     <arg name="namespace" value="$(arg namespace)"/>
